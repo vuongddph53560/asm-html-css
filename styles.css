@@ -1,0 +1,624 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Điều chỉnh kích thước chữ */
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+
+    #main-content {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    height: 88px;
+    padding-left: 120.5px;
+    padding-right: 120.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.icon-container {
+    order: -1;
+    /* Đảm bảo icon ở góc cuối bên trái */
+    margin-right: auto;
+    /* Đẩy các phần tử phía sau về phía phải cùng */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+nav li {
+    margin-right: 30px;
+    line-height: 48px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #131316;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#btn-login {
+    width: 95px;
+    height: 48px;
+    border-radius: 12px;
+    padding: 12px, 24px, 12px, 24px;
+    gap: 10px;
+    color: #F5F5F5;
+    border: none;
+
+}
+
+#main-content {
+    max-width: 100%;
+    margin: 20px auto;
+    padding-left: 120.5px;
+    padding-right: 120.5px;
+}
+
+.title-button .title {
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 70.4px;
+    letter-spacing: -2px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Chia thành hai cột bằng nhau */
+    gap: 10px;
+    /* Khoảng trống giữa các ô */
+}
+
+/* .grid-item {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+} */
+
+.img-content p {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.box-img {
+    width: 100%;
+    height: 650px;
+    background-image: url('img/Images-1x3.png');
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+#btn-1 {
+    width: 166px;
+    height: 59px;
+    border-radius: 16px;
+    padding: 16px, 32px, 16px, 32px;
+    gap: 10px;
+    background-color: #4891FF;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 20px;
+}
+
+.box-img #btn-2 {
+    align-items: center;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang và chiều dọc */
+    width: 212px;
+    height: 59px;
+    border-radius: 16px;
+    background-color: #F5F5F5;
+    color: #131316;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.box-img #btn-2 .icon {
+    margin-right: 10px;
+}
+
+.video-content {
+    width: 100%;
+    height: 963px;
+    background-color: #131316;
+    text-align: center;
+}
+
+.video-content .title {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: -1px;
+    text-align: center;
+    padding-top: 96px;
+
+}
+
+.img-video {
+    padding-bottom: 64px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    /* Chiều cao của đường line */
+    background-color: #494949;
+    /* Màu sắc của đường line */
+    ;
+    margin-top: 96px;
+}
+
+.Testimonials {
+    height: 885px;
+    width: 100%;
+    background-color: #131316;
+    padding-left: 120.5px;
+    padding-right: 120.5px;
+
+}
+
+.Testimonials .title {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: -1px;
+    margin: 0;
+    padding-top: 96px;
+    margin-bottom: 65px;
+}
+
+.slide {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slide::-webkit-scrollbar {
+    display: none;
+}
+
+#item {
+    scroll-snap-align: start;
+    width: max-content;
+    height: min-content;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 16px;
+}
+
+#item em {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+
+#strong-p {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 2px;
+}
+
+.pricing {
+    height: 1222px;
+    width: 100%;
+    display: flex;
+    /* Sử dụng flexbox để có thể sử dụng justify-content và align-items */
+    flex-direction: column;
+    /* Chỉ định hướng chính là dọc (column) */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.pricing .title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: -3px;
+    text-align: center;
+    margin-top: 72px;
+    margin-bottom: 24px;
+}
+
+.pricing .title-2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    text-align: center;
+}
+
+.grid-pricing {
+    width: min-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.grid-item {
+    width: 344px;
+    height: max-content;
+    border: Mixed solid #DFDEE2;
+    background-color: #FAFAFA;
+    flex-direction: column;
+    padding: 56px;
+    border-radius: 16px;
+    /* Các thuộc tính khác của grid-item */
+}
+
+.grid-item .title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43.2px;
+    letter-spacing: -1px;
+}
+
+.grid-item ul {
+    list-style: none;
+    /* Loại bỏ dấu chấm mặc định của danh sách */
+    padding: 0;
+    /* Loại bỏ padding mặc định của danh sách */
+}
+
+.grid-item li {
+    position: relative;
+    /* Để có thể sử dụng pseudo-element ::before */
+    padding: 12px 0px 12px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.grid-item li::before {
+    content: '\2713';
+    /* Dấu tích Unicode */
+    color: #131316;
+    /* Màu sắc của dấu tích */
+    font-size: 18px;
+    /* Kích thước của dấu tích */
+    position: absolute;
+    /* Để đặt dấu tích ở bên trái mục danh sách */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    /* Khoảng cách giữa dấu tích và nội dung mục danh sách */
+}
+
+.grid-item p {
+    color: #494A4D;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+}
+
+.grid-item-v2 {
+    width: 344px;
+    height: max-content;
+    border: Mixed solid #494949;
+    background-color: #131316;
+    flex-direction: column;
+    padding: 56px;
+    border-radius: 16px;
+    /* Các thuộc tính khác của grid-item */
+}
+
+.grid-item-v2 .title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43.2px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+}
+
+.grid-item-v2 p {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+}
+
+.grid-item-v2 ul {
+    list-style: none;
+    /* Loại bỏ dấu chấm mặc định của danh sách */
+    padding: 0;
+    /* Loại bỏ padding mặc định của danh sách */
+}
+
+.grid-item-v2 li {
+    position: relative;
+    /* Để có thể sử dụng pseudo-element ::before */
+    padding: 12px 0px 12px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 25px;
+}
+
+.grid-item-v2 li::before {
+    content: '\2713';
+    /* Dấu tích Unicode */
+    color: #FFFFFF;
+    /* Màu sắc của dấu tích */
+    font-size: 18px;
+    /* Kích thước của dấu tích */
+    position: absolute;
+    /* Để đặt dấu tích ở bên trái mục danh sách */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    /* Khoảng cách giữa dấu tích và nội dung mục danh sách */
+}
+
+
+
+
+#btn-3 {
+    width: 100%;
+    height: 59px;
+    border-radius: 16px;
+    padding: 16px, 32px, 16px, 32px;
+    gap: 10px;
+    background-color: #4891FF;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 20px;
+}
+
+.line-item {
+    margin-top: 29px;
+    margin-bottom: 32px;
+    border: 1px solid #DFDEE2;
+    width: 100%;
+}
+
+.FAQ {
+    height: 1099px;
+    width: 100%;
+    display: flex;
+    /* Sử dụng flexbox để có thể sử dụng justify-content và align-items */
+    flex-direction: column;
+    /* Chỉ định hướng chính là dọc (column) */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.FAQ .title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: -3px;
+
+}
+
+.nav-faq {
+    width: 383.27px;
+    height: 64.89px;
+    background: #F4F4F6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 111.14px;
+    /* Để căn giữa theo chiều ngang */
+}
+
+.nav-faq ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-faq li {
+    margin-right: 20px;
+    line-height: 48px;
+}
+
+.nav-faq ul li a {
+    text-decoration: none;
+    color: #131316;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    background-color: #F4F4F6;
+    padding: 12px 20px 12px 20px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.nav-faq ul li a:hover {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    background-color: #4891FF;
+    padding: 12px 20px 12px 20px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.question-1 {
+    width: 824px;
+    height: 176px;
+}
+
+.question-1 span {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+}
+
+.question-1 p {
+    margin-bottom: 41px;
+}
+
+.questions {
+    width: 824px;
+    height: max-content;
+}
+
+.questions span {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.questions hr {
+    border-width: 0px, 0px, 0px, 0px;
+    border-style: solid;
+    border-color: #DFDEE2;
+}
+
+footer {
+    background-color: #131316;
+    color: #fff;
+    width: 100%;
+    height: 579px;
+    padding-top:109px;
+    padding-left: 78px;
+}
+.footer-left img{
+    margin-bottom: 42px;
+}
+.Newsletter {
+    width: max-content;
+    height: min-content;
+    padding: 24px;
+    background-color: #F4F4F6;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.Newsletter span {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+}
+
+.Newsletter p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+}
+#btn-4{
+    width: 121px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 16px, 32px, 16px, 32px;
+    gap: 10px;
+    background-color: #4891FF;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 20px;
+}
+input{
+    border: 1px solid #BEBDC6;
+    width: 220px;
+    height: 48px;
+    border-radius:8px;
+    gap: 10px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 12px;
+    margin-right: 16px;
+}
+.icons{
+    margin-bottom: 65px;
+}
+.grid-footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.footer-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.footer-right a {
+    text-decoration: none; /* Loại bỏ gạch chân cho thẻ a */
+    color: #333; /* Đổi màu cho thẻ a */
+    display: inline-block;
+}
